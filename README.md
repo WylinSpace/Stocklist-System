@@ -1,7 +1,7 @@
 # Inventory and Item Management System
 
 ## Contributors:
-code and designed by **LIEW WEN HAO**, with multiples references taken. Including books such as: "Starting Out with C++ Early Objects 7th Edition by Tony Gaddis"
+Code and designed by **LIEW WEN HAO**, with multiples references taken. Including books such as: "Starting Out with C++ Early Objects 7th Edition by Tony Gaddis"
 
 ## Introduction
 
