@@ -92,7 +92,7 @@ class admin{
                     } else if(column==1){
                         cout << left << setw(column_3_width) << tableList[row][column];
                     } else if(column==2){
-                        cout << left << setw(column_3_width) << tableList[row][column];
+                        cout << left << setw(column_3_width) << fixed << setprecision(2) << stod(tableList[row][column]);
                     }
                 }
             }

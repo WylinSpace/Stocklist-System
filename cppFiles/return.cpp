@@ -243,19 +243,19 @@ class userOperationRETURN
 
         int daysDifference = std::abs(differenceInSeconds) / (60 * 60 * 24);
 
-        if(daysDifference>=14 && itemDeleted){
+        if(daysDifference>14 && itemDeleted){
             cout<<RED<<BOLD<<"The Borrowed Item is overdue."<<RESET<<endl;
-            int amount = daysDifference*finePerDay;
+            double amount = (daysDifference-14)*finePerDay;
             reportToAdmin(amount);
-            cout<<RED<<BOLD<<"Please pay RM " << amount << " for this component at Office."<<RESET<<endl;
+            cout<<RED<<BOLD<<"Please pay RM " << fixed << setprecision(2) << amount << " for this component at Office."<<RESET<<endl;
             this_thread::sleep_for(chrono::duration<double>(1));
-        } else if(daysDifference<14 && itemDeleted){
+        } else if(daysDifference<=14 && itemDeleted){
             cout<<BOLD<<GREEN<<"Item Returned Successfully!"<<RESET<<endl;
             this_thread::sleep_for(chrono::duration<double>(1));
         }
     }
 
-    void reportToAdmin(int amount){
+    void reportToAdmin(double amount){
         string filename = "Data/overDueList/overDueList.csv";
         ifstream infile(filename);
         if(infile.is_open()){

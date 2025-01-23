@@ -1,8 +1,8 @@
 Item ID,Item Name,Number of Item Left
 1000,Wires,500
 2000,Resistor,100
-3000,Capacitor,99
-4000,Diode,102
+3000,Capacitor,100
+4000,Diode,100
 5000,Breadboard,50
 6000,Soldering Tools,20
 7000,Multimeter,120
